@@ -17,5 +17,6 @@ namespace MoviesLab2.Models
         public DateTime DateAdded { get; set; }
         public int Rating { get; set; }
         public bool Watched { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }
