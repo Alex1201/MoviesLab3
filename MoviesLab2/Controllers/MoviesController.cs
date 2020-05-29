@@ -21,6 +21,12 @@ namespace MoviesLab2.Controllers
         }
 
         // GET: api/Movies
+        /// <summary>
+        /// Get a list of all movies.
+        /// </summary>
+        /// <param name="from">Filter movies added from this date time (incusive). Leave empty for no lower limit.</param>
+        /// <param name="to">Filter movies added up to this date time (incusive). Leave empty for no upper limit.</param>
+        /// <returns>A list of Movie objects.</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Movie>>> GetMovies(DateTime? from = null, DateTime? to = null)
         {
